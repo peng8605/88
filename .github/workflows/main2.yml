@@ -76,8 +76,8 @@ jobs:
     - name: Run unicom daily task
    
       env:
-        user2: ${{secrets.unicom_user2}}
-        password2: ${{secrets.unicom_password2}}
+        user: ${{secrets.unicom_user2}}
+        password: ${{secrets.unicom_password}}
         appid: ${{secrets.unicom_appid}}
         notify_sctkey: ${{secrets.NOTIFY_SCKEY}}
-      run: node index.js unicom --user=${user2} --password=${password2} --appid=${appid} 
+      run: node index.js unicom --user=${user} --password=${password} --appid=${appid} 
